@@ -1,0 +1,27 @@
+
+
+
+FROM node:20-alpine
+WORKDIR /app
+
+ARG VITE_APP_NAME
+ENV VITE_APP_NAME=$VITE_APP_NAME
+
+ARG VITE_PORT
+ENV VITE_PORT=$VITE_PORT
+
+ARG VITE_URL
+ENV VITE_URL=$VITE_URL
+
+ARG VITE_API
+ENV VITE_API=$VITE_API
+
+ARG VITE_SSO_APP
+ENV VITE_SSO_APP=$VITE_SSO_APP
+
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+
+CMD ["npm", "run", "preview"]
