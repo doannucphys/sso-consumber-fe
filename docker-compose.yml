@@ -12,7 +12,7 @@ services:
     image: sso_consumer1_fe_img
     container_name: sso_consumer1_fe_ct
     ports:
-      - 4000:3000
+      - 4000:4000
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
@@ -28,6 +28,6 @@ services:
     image: sso_consumer2_fe_img
     container_name: sso_consumer2_fe_ct
     ports:
-      - 5000:3000
+      - 5000:5000
     extra_hosts:
       - "host.docker.internal:host-gateway"

@@ -37,3 +37,7 @@ by default, docker compose file config to deploy 2 container at port 4000 and 50
 ```
 docker compose up -d 
 ```
+
+### capture 
+
+![Alt text](public/capture.png?raw=true "demo image")
